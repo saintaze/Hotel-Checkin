@@ -5,8 +5,8 @@ class Hotel
   def initialize(name = "Transalvania Inn")
     @name = name
     @rooms = {
-      "lovelace" => Room.new(1),
-      "hopper" => Room.new(1),
+      "lovelace" => Room.new(2),
+      "hopper" => Room.new(2),
       "turing" => Room.new(1)
     }
   end
@@ -24,7 +24,7 @@ class Hotel
   end
 
   def list_rooms
-    puts "------ ".brown + "Rooms and remaining spaces".brown + " ------".brown 
+    puts "------ ".brown + "Rooms and Remaining Spaces".brown + " ------".brown 
     @rooms.each do |k, v|
       puts k.capitalize.cyan +  " : "  + v.available_space?.to_s.brown
     end
@@ -32,7 +32,7 @@ class Hotel
   end
 
   def list_rooms_with_names
-    puts "------ ".brown + "Rooms and occupants".brown + " ------".brown 
+    puts "---------- ".brown + "Rooms and Occupants".brown + " ---------".brown 
     @rooms.each do |k, v|
       print k.capitalize.cyan +  " : ";  puts v.occupants.to_s.brown
     end
