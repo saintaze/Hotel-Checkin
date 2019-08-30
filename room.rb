@@ -1,4 +1,4 @@
-class Room
+\class Room
   attr_reader :occupants  
 
   def initialize(capacity = rand(2..5))
@@ -16,7 +16,7 @@ class Room
 
   def add_occupant(name)
     if available_space? > 0
-      @occupants << name
+      @occupants << name.capitalize
       true
     else
       false
