@@ -1,4 +1,4 @@
-\class Room
+class Room
   attr_reader :occupants  
 
   def initialize(capacity = rand(2..5))
